@@ -1,0 +1,240 @@
+/* =============================================
+   Git It Resolved — Event Page Styles
+   Theme: Git It Good Innit — Kingsman Gold
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #c5a355;
+  --primary-dark: #a8892e;
+  --text: #1a1a1a;
+  --text-muted: #5c5347;
+  --bg: #f5f0e8;
+  --card-bg: #fffdf8;
+  --border: #d4c9b5;
+  --radius: 12px;
+  --navy: #1a2744;
+  --navy-deep: #0f1a2e;
+  --gold-light: #d4b96e;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 50%, #253658 100%);
+  color: white;
+  padding: 4rem 0 3rem;
+  text-align: center;
+  border-bottom: 3px solid var(--primary);
+  position: relative;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, rgba(197, 163, 85, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.badge {
+  background: rgba(197, 163, 85, 0.2);
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold-light);
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--gold-light);
+  letter-spacing: 1px;
+}
+
+/* Main */
+main {
+  padding: 3rem 2rem;
+}
+
+/* Event Details Cards */
+.event-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.detail-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-top: 3px solid var(--primary);
+}
+
+.detail-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.detail-value {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+/* About */
+.about-section {
+  margin-bottom: 3rem;
+}
+
+.about-section h2,
+.schedule-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 3px solid var(--primary);
+  display: inline-block;
+}
+
+.about-section p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 680px;
+}
+
+/* Schedule */
+.schedule-section {
+  margin-bottom: 3rem;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.schedule-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.time {
+  font-weight: 700;
+  color: var(--primary-dark);
+  min-width: 55px;
+  font-size: 0.95rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.activity {
+  color: var(--text);
+}
+
+/* CTA */
+.cta-section {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--gold-light);
+  text-decoration: none;
+  padding: 0.9rem 2.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  border: 2px solid var(--primary);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background: var(--navy-deep);
+  transform: translateY(-2px);
+}
+
+.seats-left {
+  margin-top: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+  background: var(--navy-deep);
+  color: var(--gold-light);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+  border-top: 2px solid var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.9rem;
+  }
+}
